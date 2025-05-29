@@ -1,6 +1,7 @@
 from client import client
-from discord.ext import commands
+from dotenv import load_dotenv
 import os
+
 
 
 @client.event
@@ -11,4 +12,8 @@ for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
-bot.run("YOUR_BOT_TOKEN")
+
+load_dotenv()
+token: str = os.getenv("TOKEN")
+
+client.run(token)
