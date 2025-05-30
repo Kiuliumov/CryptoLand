@@ -1,8 +1,4 @@
-import discord
 from discord.ext import commands
+import discord
 
-
-client: commands.Bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
-
-
-
+client = commands.Bot(command_prefix='!', intents=discord.Intents.all())

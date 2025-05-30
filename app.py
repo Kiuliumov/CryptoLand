@@ -8,10 +8,9 @@ import os
 async def on_ready():
     print('We have logged in as {0.user}'.format(client.user.name))
 
-for filename in os.listdir('./cogs'):
+for filename in os.listdir('./src/cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
-
 
 load_dotenv()
 token: str = os.getenv("TOKEN")
