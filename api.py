@@ -9,3 +9,6 @@ class API:
         self.key = os.getenv('API_KEY')
 
 
+class MarketEndpoint(API):
+    pass
+
